@@ -1,0 +1,1 @@
+DishWasher:InteriorEquipment:Electricity [J](TimeStep),ClothesWasher:InteriorEquipment:Electricity [J](TimeStep),ClothesDryer:InteriorEquipment:Electricity [J](TimeStep),refrigerator:InteriorEquipment:Electricity [J](TimeStep),Oven:InteriorEquipment:Electricity [J](TimeStep) 

@@ -1,0 +1,62 @@
+!-Generator IDFEditor 1.51
+!-Option SortedOrder
+@
+RunPeriod,
+    annual,                  !- Name
+@
+    1,                       !- Begin Month
+@
+    1,                       !- Begin Day of Month
+@
+    12,                      !- End Month
+@
+    31,                      !- End Day of Month
+@
+!-   ===========  ALL OBJECTS IN CLASS: AVAILABILITYMANAGER:SCHEDULED ===========
+@
+heating_sch,             !- Heating Setpoint Temperature Schedule Name
+@
+cooling_sch;             !- Cooling Setpoint Temperature Schedule Name
+@
+!-   ===========  ALL OBJECTS IN CLASS: OUTPUT:TABLE:SUMMARYREPORTS ===========
+@
+!-   ===========  ALL OBJECTS IN CLASS: SCHEDULE:COMPACT ===========
+@
+!-   ===========  ALL OBJECTS IN CLASS: TIMESTEP ===========
+
+Timestep,
+    4;                       !- Number of Timesteps per Hour
+@
+GroundSlabPreprocessorAverage,  !- Outside Boundary Condition
+@
+surfPropOthSdCoefSlabAverage,  !- Outside Boundary Condition Object
+@
+alwaysOffHeatingSetpoint,             !- Heating Setpoint Temperature Schedule Name
+@
+alwaysOffCoolingSetpoint;             !- Cooling Setpoint Temperature Schedule Name
+@
+ThermostatSetpoint:DualSetpoint,
+	thermostat_living Dual SP Control,  !- Name
+	heating_sch,             !- Heating Setpoint Temperature Schedule Name
+	cooling_sch;             !- Cooling Setpoint Temperature Schedule Name
+@
+	GroundSlabPreprocessorAverage,  !- Outside Boundary Condition
+	surfPropOthSdCoefSlabAverage,  !- Outside Boundary Condition Object
+@
+    GroundSlabPreprocessorAverage,  !- Outside Boundary Condition
+    surfPropOthSdCoefSlabAverage,  !- Outside Boundary Condition Object
+@
+ThermostatSetpoint:DualSetpoint,
+	thermostat_living Dual SP Control,  !- Name
+	heating_sch,             !- Heating Setpoint Temperature Schedule Name
+	alwaysOffCoolingSetpoint;             !- Cooling Setpoint Temperature Schedule Name
+@
+ThermostatSetpoint:DualSetpoint,
+	thermostat_living Dual SP Control,  !- Name
+	alwaysOffHeatingSetpoint,             !- Heating Setpoint Temperature Schedule Name
+	alwaysOffCoolingSetpoint;             !- Cooling Setpoint Temperature Schedule Name
+@
+ThermostatSetpoint:DualSetpoint,
+    thermostat_living Dual SP Control,  !- Name
+    heating_sch,             !- Heating Setpoint Temperature Schedule Name
+    cooling_sch;             !- Cooling Setpoint Temperature Schedule Name

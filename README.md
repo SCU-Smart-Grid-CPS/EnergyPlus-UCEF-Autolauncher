@@ -11,6 +11,15 @@ __Updated__: 2023-04-28
 
 ## Purpose & Capabilities
 
+Command-line user interface to automatically:
+
+1. Convert regular EnergyPlus simulations to work with UCEF
+2. Launch simulations in parallel
+3. Postprocessing for energy consumption and utility bills
+4. Cleans out temporary files to save disk space - new!
+
+### List of Features
+
 - Co-simulation allows us to implement more advanced building energy controls into EnergyPlus simulations. 
 - Scalability for many building models running in parallel (Greater than 100 EnergyPlus simulations can be run in parallel. Up to 150 were tested.)
     - Enables complex interactions (such as Transactive Energy) between buildings at the timestep level. 

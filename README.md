@@ -42,13 +42,15 @@ Prior to this, there was no publicly available software to launch multiple Energ
 
 ### Prerequisites
 
-#### Base Computer requirements
+#### Computer Resource Requirements
 
-At least 4 CPU cores, more is better.
+__CPU__ 4 cores minimum, more depending on number of simulations
 
-8 GB RAM + 0.25 GB per EnergyPlus model you want to run in parallel.
+__RAM__ A general rule is 8 GB RAM + 0.25 GB per EnergyPlus model you want to run in parallel.
 
-The SCU team uses a workstation computer with 40 CPU cores and 128 GB of RAM. In testing, we have run a handful of simulations (< 10) with a laptop with 8 CPU cores and 16 GB RAM.
+The table below gives the resource consumption in testing. Differences between the alotted resources and the acutally used resources are noted in some cases. These simulations had a 2-week simulated run period.
+
+![Resource consumption table](https://github.com/SCU-Smart-Grid-CPS/EnergyPlus-UCEF-Autolauncher/blob/main/Documentation/EnergyPlus_UCEF_Superscalable_Resource_Usage.png)
 
 \> 64 GB of disk space: > 50 GB for VMs, and > 10 GB for simulations. Running 50 EnergyPlus simulations for 1 year duration used 6.1 GB.
 
@@ -111,7 +113,7 @@ Download the Supercontroller federation, v0.20 or above.
     3. Run Postprocessing code to obtain electricity costs (epautopostprocess.py and epcombineresults.py)
     4. Remove leftover files and codes for launching the simulations? Good for reducing disk space of simulations. If unsure, it is safest to skip this step. (Copy2UCEF, Launchcodes, FMU files, and unused EP output files are removed. All results and original files are kept. Note: skip this step if you are experiencing issues or files are disappearing. Runs cleanup_simfiles.py)
 
-There is a video demonstrating these steps here:
+There is a video demonstrating these steps [here](https://github.com/SCU-Smart-Grid-CPS/EnergyPlus-UCEF-Autolauncher/blob/main/Documentation/EP_UCEF_autosim_demo_2023-04-27.mp4)
 
 
 ## Component Files & Scripts
